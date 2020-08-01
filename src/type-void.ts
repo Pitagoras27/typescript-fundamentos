@@ -1,4 +1,5 @@
-// Void
+// Void. Se utiliza en las funciones para indicar el tipo de retorno
+// En este caso vacío
 
 // Tipo explicito
 function showInfo(user: any): any {
@@ -19,12 +20,14 @@ function showFormattedInfo(user: any) {
 
 showFormattedInfo({id: 1, username: 'luixaviles', firstName: 'Luis'});
 
-// tipo void, como tipo de dato en variable
+// tipo void, como tipo de dato en una variable
 let unusable: void;
 // unusable = null;
 unusable = undefined;
 
-// Tipo: Never
+// Tipo: Never especifica el proceso de una funcion en este caso
+// la utilizamos para lanzar excepciones
+// o en funciones q procesan una acción indefinidamente.
 
 function handleError(code: number, message: string): never{
 
@@ -34,9 +37,8 @@ function handleError(code: number, message: string): never{
 }
 
 try {
-  handleError(404, 'Not Found');
-} catch (error) {
-}
+    handleError(404, 'Not Found')
+} catch (error) {}
 
 function sumNumbers(limit: number): never {
   let sum = 0;
