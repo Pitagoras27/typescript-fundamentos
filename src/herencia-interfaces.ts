@@ -32,7 +32,7 @@ const picture: Picture = {
   title: "Family",
   orientation: PhotoOrientation.Landscape,
 };
-
+console.log("Picture--*->", picture);
 let newPicture = {} as Picture;
 newPicture.id = 2;
 newPicture.title = "Moon";

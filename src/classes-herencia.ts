@@ -6,6 +6,7 @@ enum PhotoOrientation {
     Square,
     Panorama
 }
+
 // SUPERclase
 abstract class Item {
     protected readonly _id: number;

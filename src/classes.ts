@@ -22,7 +22,7 @@ class Picture {
   // Comportamiento
   toString() {
     return `[id: ${this.id}, 
-                 title: ${this.title}, 
+                 title: ${this.title},  
                  orientation: ${this.orientation}]`;
   }
 }
