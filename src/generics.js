@@ -23,3 +23,28 @@ var isHero = genericFunction(deadpool).realName;
 var isVillan = genericFunction(deadpool).power;
 console.log("isHero ->", isHero);
 console.log("isVillan->", isVillan);
+// Arrays genéricos:
+var heroesGnericSintax = ["Flash", "Batman", "Superman"];
+heroesGnericSintax.push("Acuaman");
+var heroesExplicitSintax = ["Flash", "Batman", "Superman"];
+heroesExplicitSintax.push("Wolverine");
+console.log("generic array->", heroesGnericSintax);
+console.log("explicit array->", heroesExplicitSintax);
+// Clases genéricas
+var Scuare = /** @class */ (function () {
+    // Es necesario asignar los valores a los miembros de la clase desde la instancia. Por ello no puede prescindir el uso del constructor.
+    function Scuare(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    Scuare.prototype.area = function () {
+        // Se utiliza el operador + para castear el tipo de dato
+        return +this.width * +this.height;
+    };
+    return Scuare;
+}());
+// En el caso de tener una clase genérica es necesario indicar el tipo que van a utilizar sus miembros. Esto ayuda en la codificación ya que TS indicará cualquier error
+var scuareString = new Scuare("10", "3");
+console.log("scuareString->", scuareString.area());
+var scuareNumber = new Scuare(10, 3);
+console.log("scuareNumber->", scuareNumber.area());
